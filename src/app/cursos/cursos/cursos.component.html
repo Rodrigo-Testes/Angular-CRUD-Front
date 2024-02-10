@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-content>
+
+    <mat-toolbar color="primary">
+      <span>Cursos Disponiveis</span>
+    </mat-toolbar>
+
+    <table mat-table [dataSource]="cursoss" class="mat-elevation-z8">
+
+      <!-- Coluna do ID -->
+      <ng-container matColumnDef="_id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let cursoI"> {{cursoI._id}} </td>
+      </ng-container>
+
+      <!-- Coluna do nome do curso-->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Curso </th>
+        <td mat-cell *matCellDef="let cursoN"> {{cursoN.nome}} </td>
+      </ng-container>
+
+      <!-- Coluna da categoria -->
+      <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let cursoC"> {{cursoC.categoria}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="mostraColunas"></tr>
+      <tr mat-row *matRowDef="let row; columns: mostraColunas;"></tr>
+
+    </table>
+  </mat-card-content>
+</mat-card>
