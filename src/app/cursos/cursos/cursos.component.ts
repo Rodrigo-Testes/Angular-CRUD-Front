@@ -19,7 +19,13 @@ export class CursosComponent {
   //aqui coloca os dados que vem da interface Curso.ts
   cursoss: Curso[] = [
     {_id: "1", nome: "Angular", categoria:"Front-End"},
-    {_id: "2", nome: "Java", categoria:"Back-End"}
+    {_id: "2", nome: "Java", categoria:"Back-End"},
+    {_id: "3", nome: "C#", categoria:"Back-End"},
+    {_id: "4", nome: "Python", categoria:"Back-End"},
+    {_id: "5", nome: "HTML", categoria:"Front-End"},
+    {_id: "6", nome: "CSS", categoria:"Front-End"},
+    {_id: "1", nome: "Javascript", categoria:"Front-End"},
+
   ];
 
   //aqui diz quais as colunas iram ser exibidas na tabela
