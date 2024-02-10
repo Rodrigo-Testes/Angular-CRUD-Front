@@ -7,6 +7,7 @@ import { CursosService } from '../services/cursos.service';
 import { Observable } from 'rxjs';
 
 
+
 @Component({
   selector: 'app-cursos',
   standalone: true,
@@ -19,13 +20,13 @@ import { Observable } from 'rxjs';
 export class CursosComponent {
 
   //aqui coloca os dados que vem da interface Curso.ts
-  cursos: Observable<Curso[]>;
+  cursos$: Observable<Curso[]>;
 
   //aqui diz quais as colunas iram ser exibidas na tabela
   mostraColunas = ['_id' ,'nome','categoria']
 
   constructor(private cursosServico: CursosService){
     //a lista curso que esta em cima esta recebendo os dados dentro da funcao que esta no service
-    this.cursos = this.cursosServico.listaDeTodosCursos();
+    this.cursos$ = this.cursosServico.listaDeTodosCursos();
   }
 }
