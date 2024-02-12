@@ -23,7 +23,9 @@
         <!-- Coluna da categoria -->
         <ng-container matColumnDef="categoria">
           <th mat-header-cell *matHeaderCellDef> Nome </th>
-          <td mat-cell *matCellDef="let cursoC"> {{cursoC.categoria}} </td>
+          <td mat-cell *matCellDef="let cursoC"> {{cursoC.categoria}}
+            <mat-icon aria-hidden="false" aria-label="Example home icon">{{cursoC.categoria | categoria}}</mat-icon>
+          </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="mostraColunas"></tr>
@@ -32,10 +34,11 @@
       </table>
     </div>
 
+    <!--tela de carregamento-->
     <ng-template #carregando>
-    <div id="carregando-Spriner">
-        <mat-spinner></mat-spinner>
-    </div>
+      <div id="carregando-Spriner">
+          <mat-spinner></mat-spinner>
+      </div>
     </ng-template>
 
   </mat-card-content>

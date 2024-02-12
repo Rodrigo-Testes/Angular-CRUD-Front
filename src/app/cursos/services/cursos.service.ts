@@ -10,7 +10,7 @@ import { delay, take } from 'rxjs';
 })
 export class CursosService {
 
-  //
+  //colocando a URL da API em uma variavel(nesse caso esta mokado)
   private readonly API = '/assets/cursosMokado.json';
 
   constructor(public httpClient: HttpClient) { }
@@ -19,7 +19,7 @@ export class CursosService {
   listaDeTodosCursos(){
     return this.httpClient.get<Curso[]>(this.API).pipe(
       take(1),
-      delay(15000)
+      delay(5000),
     );
   }
 }
