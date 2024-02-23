@@ -9,9 +9,9 @@
       <table mat-table [dataSource]="cursos" class="mat-elevation-z8">
 
         <!-- Coluna do ID -->
-        <ng-container matColumnDef="_id">
+        <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> ID </th>
-          <td mat-cell *matCellDef="let cursoI"> {{cursoI._id}} </td>
+          <td mat-cell *matCellDef="let cursoI"> {{cursoI.id}} </td>
         </ng-container>
 
         <!-- Coluna do nome do curso-->

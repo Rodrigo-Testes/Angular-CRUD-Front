@@ -25,7 +25,7 @@ export class CursosComponent {
   cursos$: Observable<Curso[]>;
 
   //aqui diz quais as colunas iram ser exibidas na tabela
-  mostraColunas = ['_id' ,'nome','categoria']
+  mostraColunas = ['id' ,'nome','categoria']
 
   constructor(
     private cursosServico: CursosService,
