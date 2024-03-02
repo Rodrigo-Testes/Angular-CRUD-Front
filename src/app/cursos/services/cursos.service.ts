@@ -11,7 +11,7 @@ import { delay, take } from 'rxjs';
 export class CursosService {
 
   //colocando a URL da API em uma variavel(nesse caso esta mokado)
-  private readonly API = 'http://localhost:8080/api/cursos';
+  private readonly API = 'api/cursos';
 
   constructor(public httpClient: HttpClient) { }
 
